@@ -51,4 +51,71 @@ The dataset is ideal for learning language structure, grammar, and writing style
 - Convert tokens into integer IDs
 - Create input-target pairs for next-token prediction
 
-Example:
+
+---
+
+### 3️⃣ Model Architecture
+The model follows a **GPT-style decoder-only design**:
+
+- Token Embedding Layer
+- Positional Encoding
+- Multiple Transformer Decoder Blocks
+- Causal Self-Attention
+- Linear Output Layer over vocabulary
+
+Causal masking ensures the model only attends to **past tokens**.
+
+---
+
+### 4️⃣ Training Process
+- Autoregressive training objective
+- Cross-entropy loss
+- Batch-wise training using shuffled reviews
+- The model learns to predict the next word given previous words
+
+---
+
+### 5️⃣ Text Generation
+After training, the model can generate text by:
+1. Providing an initial prompt
+2. Predicting the next token
+3. Feeding the prediction back into the model
+4. Repeating until completion
+
+---
+
+
+---
+
+## 📚 Key Concepts Learned
+- Decoder-only Transformers
+- Causal Attention Masks
+- Autoregressive Language Modeling
+- Token Embeddings & Positional Encoding
+- Text Generation using Neural Networks
+
+---
+
+## 📈 Learning Outcome
+By completing this lab, you will:
+- Understand how GPT-like models generate text
+- Learn why decoders are used for language modeling
+- Gain hands-on experience with Transformer internals
+- Be able to adapt the model for other NLP tasks
+
+---
+
+## 🔮 Future Improvements
+- Use subword tokenization (BPE / WordPiece)
+- Increase model depth and attention heads
+- Train on larger corpora
+- Fine-tune for sentiment classification or instruction following
+
+---
+
+## 🏫 Course Information
+**Generative AI Language Modelling With Transformers IBM**  
+Decoder-Based Language Modeling Lab (IMDb Dataset)
+
+---
+
